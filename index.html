@@ -1,53 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kidney Health Diet Plan</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personalized Kidney Diet Plan</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header>
+    <h1>Kidney Health Diet Plan</h1>
+  </header>
 
-    <header>
-        <h1>Kidney Health Diet Plan</h1>
-        <p>Enter your details to get a personalized diet plan for kidney health</p>
-    </header>
+  <main>
+    <section>
+      <h2>Your Personalized Kidney Diet Plan</h2>
 
-    <div class="form-container">
-        <form onsubmit="return calculateBMI()">
-            <label for="weight">Weight (kg):</label>
-            <input type="number" id="weight" placeholder="Enter your weight" required>
+      <p><strong>Based on your input, here is a recommended diet plan:</strong></p>
+      
+      <table>
+        <tr>
+          <th>Meal</th>
+          <th>Food</th>
+        </tr>
+        <tr>
+          <td>Breakfast</td>
+          <td>2 Egg Whites, 1 Idli (Rice), 1 Tbsp Unsalted Butter, ½ Tbsp Sugar, ½ Cup Cream of Wheat</td>
+        </tr>
+        <tr>
+          <td>Lunch</td>
+          <td>¾ Cup of Dal Fry, 2 Pcs Naan or Roti, ½ Cup of Pulao with Cranberry, ½ Cup of Cauliflower and Potato Recipe</td>
+        </tr>
+        <tr>
+          <td>Dinner</td>
+          <td>2 Pcs Cutlet (Vegetable), ½ Cup of Veggie Stir-Fry (Zucchini), ½ Cup of Mixed Fruits (Grapes and Pineapple)</td>
+        </tr>
+        <tr>
+          <td>Snacks</td>
+          <td>1 Cup of Cold Water, 1 Tbsp Coriander Chutney, 1 Pcs Peach Pie, 1 Cup of Lime Soda</td>
+        </tr>
+      </table>
 
-            <label for="height">Height (cm):</label>
-            <input type="number" id="height" placeholder="Enter your height" required>
+      <h3>Foods You Should Eat:</h3>
+      <ul>
+        <li>Egg Whites (High-quality protein, low in phosphorus and potassium)</li>
+        <li>Cauliflower (Rich in Vitamin C, K, and B)</li>
+        <li>Blueberries (Low in sodium, potassium, and phosphorus)</li>
+        <li>Skinless Chicken (Low in sodium, phosphorus, and potassium)</li>
+        <li>Garlic (Alternative to salt, anti-inflammatory properties)</li>
+        <li>Pineapple (Low in potassium and rich in vitamin C)</li>
+        <li>Sea Bass (High-quality protein and omega-3 fatty acids)</li>
+        <li>Onions (Enhances flavor, low in sodium, potassium, and phosphorus)</li>
+      </ul>
 
-            <label for="age">Age (years):</label>
-            <input type="number" id="age" placeholder="Enter your age" required>
+      <h3>Foods You Should Avoid:</h3>
+      <ul>
+        <li>Dairy Products (High in phosphorus and potassium)</li>
+        <li>Bananas (High in potassium)</li>
+        <li>Processed Foods (High in sodium, phosphorus, unhealthy fats)</li>
+        <li>Dark-Colored Soda (Contains phosphorus additives)</li>
+        <li>Tomatoes (High in potassium)</li>
+        <li>Pickles (High in sodium)</li>
+        <li>Avocados (High in potassium)</li>
+        <li>Peanut Butter (High in phosphorus)</li>
+      </ul>
 
-            <button type="submit">Calculate BMI</button>
-        </form>
-    </div>
+      <h3>Notes:</h3>
+      <p>These guidelines are based on your individual health needs. Always consult with your healthcare provider before making significant changes to your diet. This diet plan helps manage your kidney health while supporting your body's nutritional needs.</p>
+    </section>
+  </main>
 
-    <footer>
-        <p>&copy; 2024 Kidney Health Diet Plans</p>
-    </footer>
-
-    <script>
-        function calculateBMI() {
-            let weight = parseFloat(document.getElementById('weight').value);
-            let height = parseFloat(document.getElementById('height').value) / 100; // Convert cm to meters
-            let age = parseInt(document.getElementById('age').value);
-
-            if (weight <= 0 || height <= 0 || age <= 0) {
-                alert("Please enter valid inputs.");
-                return false;
-            }
-
-            let bmi = weight / (height * height);
-            window.location.href = `diet-plan.html?bmi=${bmi.toFixed(2)}`; // Pass BMI as URL parameter
-            return false;
-        }
-    </script>
-
+  <footer>
+    <p>© 2024 Kidney Health Resources | All Rights Reserved</p>
+  </footer>
 </body>
 </html>
