@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Personalized Diet Plan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Your Personalized Kidney Health Diet Plan</h1>
+        <p>Your BMI: <span id="bmiValue"></span></p>
+    </header>
+
+    <div class="diet-plan">
+        <h2>Breakfast</h2>
+        <ul>
+            <li>2 Egg White or ½ Cup Substitute of Egg</li>
+            <li>1 Idli (Rice)</li>
+            <li>1 Tbsp of Butter (Unsalted)</li>
+            <li>1 Tbsp of Coriander Chutney</li>
+            <li>½ Cup Cream of Wheat</li>
+            <li>½ Tbsp Sugar</li>
+            <li>¼ Cup of Creamer (Non-dairy)</li>
+        </ul>
+
+        <h2>Lunch</h2>
+        <ul>
+            <li>¾ Cup of Dal Fry</li>
+            <li>2 Pcs. Naan or Roti</li>
+            <li>½ Cup of cauliflower and potato recipe with leached potatoes</li>
+            <li>½ Cup of Mixed Fruits (grapes and pineapple)</li>
+            <li>⅓ Cup of Sambar</li>
+            <li>¾ Cup of Salad, including Spinach, Mint, Cucumber, Green Pepper, Lettuce, Cilantro, Lemon, and Olive Oil</li>
+        </ul>
+
+        <h2>Dinner</h2>
+        <ul>
+            <li>2 Pcs Cutlet (Vegetable)</li>
+            <li>½ Cup of Veggie Stir-Fry (Zucchini)</li>
+            <li>1 Pcs. Peach Pie</li>
+        </ul>
+
+        <h2>Snacks</h2>
+        <ul>
+            <li>3 Pcs of Idli Made of Corn</li>
+            <li>1 Tbsp of Coriander Chutney</li>
+            <li>1 Cup of Cold Water</li>
+            <li>1 cup of lime soda</li>
+            <li>1 Cup of Tea with non-dairy creamer</li>
+        </ul>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Kidney Health Diet Plans</p>
+    </footer>
+
+    <script>
+        // Get the BMI from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const bmi = urlParams.get('bmi');
+
+        if (bmi) {
+            document.getElementById('bmiValue').innerText = bmi;
+        } else {
+            document.getElementById('bmiValue').innerText = 'N/A';
+        }
+    </script>
+
+</body>
+</html>

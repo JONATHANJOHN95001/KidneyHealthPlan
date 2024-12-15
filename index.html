@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kidney Health Diet Plan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Kidney Health Diet Plan</h1>
+        <p>Enter your details to get a personalized diet plan for kidney health</p>
+    </header>
+
+    <div class="form-container">
+        <form onsubmit="return calculateBMI()">
+            <label for="weight">Weight (kg):</label>
+            <input type="number" id="weight" placeholder="Enter your weight" required>
+
+            <label for="height">Height (cm):</label>
+            <input type="number" id="height" placeholder="Enter your height" required>
+
+            <label for="age">Age (years):</label>
+            <input type="number" id="age" placeholder="Enter your age" required>
+
+            <button type="submit">Calculate BMI</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Kidney Health Diet Plans</p>
+    </footer>
+
+    <script>
+        function calculateBMI() {
+            let weight = parseFloat(document.getElementById('weight').value);
+            let height = parseFloat(document.getElementById('height').value) / 100; // Convert cm to meters
+            let age = parseInt(document.getElementById('age').value);
+
+            if (weight <= 0 || height <= 0 || age <= 0) {
+                alert("Please enter valid inputs.");
+                return false;
+            }
+
+            let bmi = weight / (height * height);
+            window.location.href = `diet-plan.html?bmi=${bmi.toFixed(2)}`; // Pass BMI as URL parameter
+            return false;
+        }
+    </script>
+
+</body>
+</html>
